@@ -1,16 +1,16 @@
 package ru.job4j.di.model;
 
-import org.springframework.context.annotation.Scope;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import ru.job4j.di.model.Store;
 
 @Component
+@AllArgsConstructor
 @Scope("prototype")
 public class StartUI {
 
-    @Autowired
-    private Store store;
+    private final Store store;
 
     public void add(String value) {
         store.add(value);
