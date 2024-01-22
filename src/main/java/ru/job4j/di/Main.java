@@ -1,5 +1,8 @@
 package ru.job4j.di;
 
+import ru.job4j.di.model.StartUI;
+import ru.job4j.di.model.Store;
+
 public class Main {
     public static void main(String[] args) {
         Context context = new Context();

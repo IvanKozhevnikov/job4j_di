@@ -4,8 +4,7 @@ import java.util.Objects;
 
 public class Test {
     public static void main(String[] args) {
-        //  1
-        // 2 3
+
         TreeNode t1 = new TreeNode(1)
                 .setLeft(new TreeNode(2))
                 .setRight(new TreeNode(3));
@@ -14,9 +13,6 @@ public class Test {
                 .setRight(new TreeNode(3));
         System.out.println("t1.equals(t2) " + t1.equals(t2));
 
-        //    1
-        //  2   3
-        //4  - -  -
         TreeNode t3 = new TreeNode(1)
                 .setLeft(new TreeNode(2).setLeft(new TreeNode(4)))
                 .setRight(new TreeNode(3));
@@ -79,17 +75,4 @@ class TreeNode {
     public int hashCode() {
         return Objects.hash(value, left, right);
     }
-//    @Override
-//    public boolean equals(Object o) {
-//        // TODO - implement this
-//
-//        if(o.hashCode() == this.hashCode()) {
-//            return true;
-//        }
-//        return false;
-//
-//        if(o.equals(this.value)) {
-//            return true;
-//        }
-//    }
 }
