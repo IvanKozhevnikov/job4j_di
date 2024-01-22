@@ -1,8 +1,9 @@
-package ru.job4j.di;
+package ru.job4j.di.model;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.job4j.di.model.Store;
 
 @Component
 @Scope("prototype")

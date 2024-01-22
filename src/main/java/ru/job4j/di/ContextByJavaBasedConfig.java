@@ -3,12 +3,10 @@ package ru.job4j.di;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.job4j.di.model.StartUI;
 
-public class SpringDI {
+public class ContextByJavaBasedConfig {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("ru.job4j.di");
-        context.refresh();
-        StartUI ui = context.getBean(StartUI.class);
+        var context = new AnnotationConfigApplicationContext("ru.job4j.di.model");
+        var ui = context.getBean(StartUI.class);
         ui.add("Petr Arsentev");
         ui.add("Ivan ivanov");
         ui.print();
